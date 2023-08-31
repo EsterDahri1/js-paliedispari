@@ -34,10 +34,18 @@ invia.addEventListener('click', function(){
 
     //Use fuction to sum numbers
     function sumPcUser(Pc, User) {
-        return Pc + User;
+        return Pc + User; 
     }
 
     let sum = sumPcUser(pcNumber, userNumber);
+    console.log(sum);
+
+    if (sum % 2 === 0) {
+        sum = 'true'
+    } else {
+        sum = 'false'
+    }
+
     console.log(sum);
 })
 

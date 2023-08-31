@@ -23,15 +23,16 @@ let invia = document.querySelector('.invia');
 invia.addEventListener('click', function(){
     let userNumber = Number(document.getElementById('userNumber').value);
     console.log(userNumber);
+    
+    //Generate a random pcNumber with function
+    function rangePcNumber(min, max) {
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
 
+    let pcNumber = rangePcNumber(1, 5);
+    console.log(pcNumber);
 })
 
 
-//Generate a random pcNumber with function
-function rangePcNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1) ) + min;
-}
 
-let pcNumber = rangePcNumber(1, 5);
-console.log(pcNumber);
 

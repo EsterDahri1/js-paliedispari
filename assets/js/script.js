@@ -19,6 +19,8 @@ Dichiariamo chi ha vinto.*/
 
 //Add button use 
 let invia = document.querySelector('.invia');
+let even = document.getElementById('Even').value;
+let odd = document.getElementById('Odd').value;
 
 invia.addEventListener('click', function(){
     let userNumber = Number(document.getElementById('userNumber').value);
@@ -40,14 +42,26 @@ invia.addEventListener('click', function(){
     let sum = sumPcUser(pcNumber, userNumber);
     console.log(sum);
 
+    even = 'true';
+    odd = 'false';
+
     if (sum % 2 === 0) {
-        sum = 'true'
+        sum = even
     } else {
-        sum = 'false'
+        sum = odd
     }
 
     console.log(sum);
-})
+
+    //Declare who won
+    if(sum == even && odd){
+        console.log('Hai vinto!');
+        document.querySelector('.result').innerHTML = 'Hai vinto!'
+    }else {
+        console.log('Hai perso!');
+        document.querySelector('.result').innerHTML = 'Hai perso!'
+    }
+});
 
 
 

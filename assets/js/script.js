@@ -23,7 +23,7 @@ let invia = document.querySelector('.invia');
 invia.addEventListener('click', function(){
     let userNumber = Number(document.getElementById('userNumber').value);
     console.log(userNumber);
-    
+
     //Generate a random pcNumber with function
     function rangePcNumber(min, max) {
         return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -31,6 +31,14 @@ invia.addEventListener('click', function(){
 
     let pcNumber = rangePcNumber(1, 5);
     console.log(pcNumber);
+
+    //Use fuction to sum numbers
+    function sumPcUser(Pc, User) {
+        return Pc + User;
+    }
+
+    let sum = sumPcUser(pcNumber, userNumber);
+    console.log(sum);
 })
 
 

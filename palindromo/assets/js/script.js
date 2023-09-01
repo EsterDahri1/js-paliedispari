@@ -27,3 +27,5 @@ if (stringPrompt === reverseString){
 }else{
     console.log('La parola non è palindroma');
 };
+
+
